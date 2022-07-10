@@ -1,0 +1,45 @@
+.game {
+    width: var(--max-container);
+    margin: auto;
+    padding: var(--padding-container);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-message {
+    background-color: var(--error);
+    margin: auto;
+    opacity: 0;
+    display: flex;
+    padding: 1rem;
+    transition: .5s;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--error);
+}
+
+.error-message.filled {
+    opacity: 1;
+}
+
+button.new-game {
+    background-color: var(--green-tile);
+    border: none;
+    border-radius: .25rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button.homepage-button {
+    margin-bottom: 1rem;
+}

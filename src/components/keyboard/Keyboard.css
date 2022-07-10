@@ -1,0 +1,61 @@
+.keyboard {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    margin-bottom: 0.25rem;
+}
+
+.keyboard > button {
+    grid-column: span 2;
+    margin: 0.25rem;
+    background: var(--gray);
+    color: var(--white);
+    height: 3.75rem;
+    border-radius: 0.25rem;
+    line-height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border: none;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.keyboard > button svg {
+    fill: var(--white);
+}
+
+.keyboard > button:nth-of-type(11) {
+    grid-column: 2 / 4;
+}
+
+.keyboard > button.big-key {
+    grid-column: span 3;
+}
+
+.keyboard > button.green {
+    background: var(--green-tile);
+    transition: all 0.3s ease-in;
+}
+
+.keyboard > button.yellow {
+    background: var(--yellow-tile);
+    transition: all 0.3s ease-in;
+}
+
+.keyboard > button.gray {
+    background: var(--gray-tile);
+    transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 532px) {
+    .keyboard {
+        width: calc(100% + 1rem);
+        max-width: calc(100% + 1rem);
+        transform: translateX(-.5rem);
+    }
+}

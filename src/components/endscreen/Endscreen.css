@@ -1,0 +1,58 @@
+.endscreen {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000050;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+
+.endscreen > div {
+    width: var(--max-container);
+    aspect-ratio: 1 / .85;
+    padding: var(--padding-container);
+    border-radius: .5rem;
+    background-color: var(--black-2);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #1a1a1b;
+    padding: 1rem;
+}
+
+.endscreen > div svg {
+    fill: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.endscreen > div div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 4rem);
+    transform: translate(-50%, -50%);
+}
+
+.endscreen > div div h1 {
+    margin-top: 1rem;
+    font-weight: 400;
+    width: 100%;
+}
+
+.endscreen > div div h1 span {
+    font-weight: 700;
+    display: block;
+}
+
+.endscreen > div div h1 span.green {
+    color: var(--green-tile);
+    font-size: 4rem;
+}
+
+.endscreen > div div h1 span.wrong {
+    font-size: 4rem;
+}

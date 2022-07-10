@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --gray: #86888a;
+  --gray-2: #dcdcdc;
+  --gray-3: #dfdfdf;
+  --darkGray: #939598;
+  --white: #fff;
+  --black: #212121;
+  --black-2: #121212;
+  --black-3: #363636;
+  --filled: #565758;
+
+  --green-tile: #538d4e;
+  --yellow-tile: #b59f3b;
+  --gray-tile: #3a3a3c;
+  --error: #8a2020;
+
+  --max-container: 31.25rem;
+  --padding-container: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: var(--black-2);
+  color: var(--white);
+  height: 100vh;
+}
+
+#root,
+.App {
+  height: 100%;
+}
+
+@media screen and (max-width: 532px) {
+  :root {
+    --max-container: 100vw;
+    --padding-container: 0 1rem;
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background-color: var(--black-2);
+    border-color: var(--black-3);
+  }
+  45% {
+    transform: rotateX(90deg);
+    background-color: var(--black-2);
+    border-color: var(--black-3);
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background);
+    border-color: var(--border-color);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+    border-color: var(--darkGray);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    border-color: var(--filled);
+  }
+}
